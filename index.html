@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,31 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title>IDK A GAME</title>
 </head>
+
 <body>
-    <h1 id="title">IDK A GAME</h1>
-    <button id="login">Log In / Sign In</button>
-    <img id="dna" src="img/dnacraft.png">
-    <hr>
-    <canvas id="game"></canvas>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title">
+                <h1 class="title">IDK A GAME</h1>
+                <img class="small-img" src="img/dnacraft.png">
+            </div>
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="btn">hover me</a>
+        </div>
+    </div>
+    <canvas class="game"></canvas>
+
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

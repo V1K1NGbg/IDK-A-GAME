@@ -1,16 +1,139 @@
-#dna {
-    display:inline;
-    width: 50px;
-    height: 50px;
+.small-img {
+    border-radius: 10px;
+    display: inline;
+    width: 40px;
+    height: 40px;
     top: 0;
     left: 0;
 }
-#title {
-    position:fixed;
+
+.title {
+    position: fixed;
     left: 50%;
     transform: translate(-50%, -50%);
+    top: -7px;
 }
-#login {
+
+.login {
     top: 0;
-    float:right;
+    float: right;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'segoe ui';
+}
+
+.nav {
+    height: 52px;
+    width: 100%;
+    background-color: #00aaaa;
+    position: relative;
+}
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #ffffff;
+    padding: 5px 5px 5px 5px;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav>.nav-links>a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: #00aaaa;
+    }
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #ffffff;
+    }
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #00aaaa;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+    }
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    font-size: 9.6px;
+    text-decoration: none;
+    color: #fff;
+    border: 0.6px solid #fff;
+    padding: 4.8px 9.6px;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+    background-size: 230%;
+    transition: all .3s
+}
+
+.btn:hover {
+    background-position: 100%;
+    color: #56C596;
+    transform: translateX(3.2px);
+    box-shadow: 0 3.2px 9.6px rgba(0, 0, 0, 0.2)
 }
